@@ -16,6 +16,18 @@ analyzes the results and gives a clear status summary.
 ---
 
 ## 🗂️ Project Structure
+
+- **agent/**
+  - `main.py` → Entry point of the program
+  - `agent_core.py` → Core AI analysis logic
+- **reports/**
+  - `example_report.txt` → Sample test report (input)
+- **output/**
+  - `.gitkeep` → Placeholder for result files
+- **tests/**
+  - `test_agent.py` → Automated unit tests
+- `requirements.txt` → Python dependencies
+- `README.md` → Project documentation
 ---
 
 ## ⚙️ Technologies
@@ -31,6 +43,10 @@ analyzes the results and gives a clear status summary.
 ---
 
 ## 🚀 How It Works
+
+1. **Input:** `reports/example_report.txt`
+2. **Agent:** Reads and analyzes the report
+3. **Output:** Total tests / Passed / Failed / Status
 
 ---
 
