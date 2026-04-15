@@ -1,0 +1,10 @@
+TEST REPORT - SmartBear Store
+Date: 2026-04-15
+Tester: Kasim
+
+TC001 - Login Test         PASS
+TC002 - Search Product     PASS
+TC003 - Add to Cart        FAIL - Item not added
+TC004 - Checkout Process   PASS
+TC005 - Payment Gateway    FAIL - Timeout error
+TC006 - Logout Test        PASS
