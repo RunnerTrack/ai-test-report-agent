@@ -1,21 +1,17 @@
 # ai-test-report-agent
-# Hauptdatei (f) des KI-Agenten
+# Hauptdatei (f) des KI-Agenten (m)
+
+from agent.agent_core import TestReportAgent  # ← HINZUFÜGEN!
 
 def main():
     print("AI Test Report Agent gestartet...")
 
-    with open("reports/example_report.txt", "r") as f:
+    with open("reports/examplereport.txt", "r") as f:  # ← Name korrigieren!
         report_text = f.read()
     
-    # Agent erstellen und analysieren
     agent = TestReportAgent()
-    result = agent.analyze(report_text)
-    
-    # Ergebnis (n) ausgeben
-    print(f"Total Tests:  {result['total_tests']}")
-    print(f"Passed:       {result['passed']}")
-    print(f"Failed:       {result['failed']}")
-    print(f"Status:       {result['status']}")
-    
+    ai_result = agent.analyze_with_ai(report_text)  # ← KI statt analyze!
+    print("KI-Analyse:\n", ai_result)  # ← GPT-Output!
+
 if __name__ == "__main__":
     main()
