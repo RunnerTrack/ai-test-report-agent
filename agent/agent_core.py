@@ -2,7 +2,6 @@
 # KI-Logik (f) mit OpenAI API
 
 import os
-from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,8 +14,8 @@ class TestReportAgent:
     """
 
     def __init__(self):
-        self.name   = "AI Test Report Agent"
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.name = "AI Test Report Agent"
+        # ✅ OpenAI Client (m) wird erst später erstellt!
 
     def analyze(self, report_text: str) -> dict:
         """
@@ -38,8 +37,11 @@ class TestReportAgent:
     def analyze_with_ai(self, report_text: str) -> str:
         """
         Analysiert (A) einen Testbericht (m) – MIT KI!
-        Gibt eine Empfehlung (f) auf Englisch zurück
+        OpenAI Client (m) wird erst HIER erstellt!
         """
+        from openai import OpenAI
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
         prompt = f"""
 You are a QA analyst and Business Analyst assistant.
 Analyze the following test report and provide:
@@ -50,7 +52,7 @@ Analyze the following test report and provide:
 Test Report:
 {report_text}
 """
-        response = self.client.chat.completions.create(
+        response = client.chat.completions.create(
             model    = "gpt-4o-mini",
             messages = [
                 {"role": "system", "content": "You are a helpful QA and BA assistant."},
