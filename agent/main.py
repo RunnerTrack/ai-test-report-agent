@@ -6,7 +6,7 @@ from agent.agent_core import TestReportAgent  # ← HINZUFÜGEN!
 def main():
     print("AI Test Report Agent gestartet...")
 
-    with open("reports/examplereport.txt", "r") as f:  # ← Name korrigieren!
+    with open("reports/example_report.txt", "r") as f:  # ← Name korrigieren!
         report_text = f.read()
     
     agent = TestReportAgent()
