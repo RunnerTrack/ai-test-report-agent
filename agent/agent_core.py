@@ -23,9 +23,13 @@ class TestReportAgent:
         Zählt (A) PASS und FAIL
         """
         lines  = report_text.strip().split("\n")
-        total  = len(lines)
-        passed = sum(1 for l in lines if "PASS" in l.upper())
-        failed = sum(1 for l in lines if "FAIL" in l.upper())
+        
+        # Nur Zeilen (Pl.) mit TC zählen!
+        tc_lines = [l for l in lines if l.strip().startswith("TC")]
+        
+        total  = len(tc_lines)
+        passed = sum(1 for l in tc_lines if "PASS" in l.upper())
+        failed = sum(1 for l in tc_lines if "FAIL" in l.upper())
 
         return {
             "total_tests": total,
