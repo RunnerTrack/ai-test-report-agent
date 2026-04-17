@@ -8,7 +8,7 @@ load_dotenv()
 
 class TestReportAgent:
     """
-    KI-Agent (m) zur Analyse (f) von Testberichten (Pl.)
+    KI-Agent(m) zur Analyse (f) von Testberichten (Pl.)
     Eingabe (f):  Testbericht (m) als Text
     Ausgabe (f):  Zusammenfassung (f) und Empfehlung (f)
     """
