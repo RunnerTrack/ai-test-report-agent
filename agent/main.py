@@ -41,5 +41,19 @@ def main():
     ai_result = agent.analyze_with_ai(report_text)
     print(ai_result)
 
+    print("\nKI-Analyse (OpenAI)-2:")
+    question2="(Ich möchte, dass du ab jetzt, mein auf Deutsch geschriebene Sätze grammatisch prüfst und korrigierst bei Bedarf) Gibt heutzutage da eine Anstalldung im Darmstadt? Wie oft werden diese Anstalltungen stattfinden? Wie weit ist es zu meiner Arbeit?"
+    ai_result = agent.analyze_with_ai(question2)
+    print(question2)
+
+    question3="Kannst du mir ein paar große Geschäfte nah zu meinem Wohnung in Eschborn verraten?"
+    ai_result = agent.analyze_with_ai(question3)
+    print(ai_result)
+
+    question4="Kannst du mir nochmal sagen, wie weit ist diese Strecke von meinem Wohnung?"
+    ai_result = agent.analyze_with_ai(question4)
+    print(ai_result)
+
+
 if __name__ == "__main__":
     main()
