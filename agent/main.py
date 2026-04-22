@@ -122,19 +122,55 @@ def ask_general_question():
     print(answer)
     print("-" * 60)
 
+def ask_general_pre_question():
+    """Stellt eine allgemeine Frage (f, A) an die KI (f, D)."""
+    print("\n💬 General AI Assistant for manual prep.💬")
+    print("-" * 60)
+    
+    ##question = input("Deine Frage: ").strip()
+    question="Was ist die Population und wie leben die Menschen in Kuyucak, Yalvac, Isparta,Türkei?"
+    
+    if not question:
+        print("❌ Keine Frage eingegeben. Abbruch (m).")
+        return
+    
+    # Optional: Kontext hinzufügen
+    ##add_context = input("\nMöchtest du Kontext (m, A) hinzufügen? (j/n): ").strip().lower()
+    context = ""
+    add_context="n"
+    if add_context == "j":
+        print("Gib den Kontext (m, A) ein (leere Zeile zum Beenden):\n")
+        context_lines = []
+        while True:
+            line = input()
+            if line.strip() == "":
+                break
+            context_lines.append(line)
+        context = "\n".join(context_lines)
+    
+    assistant = GeneralAssistant()
+    
+    print("\n🤖 Antwort:")
+    print("-" * 60)
+    answer = assistant.ask(question, context)
+    print(answer)
+    print("-" * 60)
+
+
+
+
+
+
 
 def main():
     """Hauptfunktion (f) mit Menü-Schleife (f, D)."""
     print("\n🚀 AI Test Report Agent gestartet...")
-    howmany=3
-    while True:
+    weiter=True
+    while weiter:
+        weiter=False
         print_menu()
 #        choice = input("\nWähle eine Option (1-4): ").strip()
-        choice="1"
-        howmany-=1
-        if (howmany<0):
-            choice="4"
-        
+        choice="5"
         if choice == "1":
             analyze_example_report()
         
@@ -143,6 +179,9 @@ def main():
         
         elif choice == "3":
             ask_general_question()
+
+        elif choice == "5":
+            ask_general_pre_question()
         
         elif choice == "4":
             print("\n👋 Programm (n) wird beendet. Auf Wiedersehen!")
@@ -150,6 +189,7 @@ def main():
         
         else:
             print("\n❌ Ungültige Eingabe (f). Bitte wähle 1, 2, 3 oder 4.")
+        
         
 #        input("\n[Drücke Enter (m, A) zum Fortfahren...]")
             print("\nDrücke Enter zum Fortfahren nicht möglich!")
