@@ -11,7 +11,7 @@ from agent.general_assistant import GeneralAssistant
 def print_menu():
     """Zeigt das Hauptmenü (n, A)."""
     print("\n" + "=" * 60)
-    print("🤖 AI Test Report Agent - Hauptmenü")
+    print("🤖🤖🤖 AI Test Report Agent - Hauptmenü 🤖🤖🤖")
     print("=" * 60)
     print("1. Testbericht analysieren (vorhandener Beispiel-Report)")
     print("2. Eigenen Testbericht analysieren (Text eingeben)")
