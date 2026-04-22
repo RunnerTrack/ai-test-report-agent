@@ -148,7 +148,8 @@ def main():
         else:
             print("\n❌ Ungültige Eingabe (f). Bitte wähle 1, 2, 3 oder 4.")
         
-        input("\n[Drücke Enter (m, A) zum Fortfahren...]")
+#        input("\n[Drücke Enter (m, A) zum Fortfahren...]")
+            print("\nDrücke Enter zum Fortfahren nicht möglich!")
 
 
 if __name__ == "__main__":
