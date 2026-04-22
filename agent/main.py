@@ -126,11 +126,14 @@ def ask_general_question():
 def main():
     """Hauptfunktion (f) mit Menü-Schleife (f, D)."""
     print("\n🚀 AI Test Report Agent gestartet...")
-    
+    howmany=3
     while True:
         print_menu()
 #        choice = input("\nWähle eine Option (1-4): ").strip()
         choice="1"
+        
+        if (howmany--<1)
+            choice=4
         
         if choice == "1":
             analyze_example_report()
