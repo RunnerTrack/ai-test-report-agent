@@ -131,9 +131,9 @@ def main():
         print_menu()
 #        choice = input("\nWähle eine Option (1-4): ").strip()
         choice="1"
-        
-        if (howmany--<1)
-            choice=4
+        howmany-=1
+        if (howmany<0)
+            choice="4"
         
         if choice == "1":
             analyze_example_report()
