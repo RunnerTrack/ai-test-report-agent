@@ -132,7 +132,7 @@ def main():
 #        choice = input("\nWähle eine Option (1-4): ").strip()
         choice="1"
         howmany-=1
-        if (howmany<0)
+        if (howmany<0):
             choice="4"
         
         if choice == "1":
