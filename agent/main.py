@@ -129,7 +129,8 @@ def main():
     
     while True:
         print_menu()
-        choice = input("\nWähle eine Option (1-4): ").strip()
+#        choice = input("\nWähle eine Option (1-4): ").strip()
+        choice=1
         
         if choice == "1":
             analyze_example_report()
